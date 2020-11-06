@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import Buscador from './componets/Buscador';
+
+
+
 
 function App() {
   return (
-    <p>Hola</p>
+    <Fragment>
+      <div className="container">
+        <Buscador />
+      </div>
+    </Fragment>
   );
 }
 

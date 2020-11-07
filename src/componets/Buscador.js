@@ -47,7 +47,8 @@ const Buscador = ({ saveCity, saveCode }) => {
                 >
                     <div className="row">
                         <div className="col s12">
-                            <p className="location-text">Localización:</p>
+                            {/*<p className="location-text">Localización:</p>*/}
+                            
                             <div className="input-field inline">
                                 <input 
                                     type="text"

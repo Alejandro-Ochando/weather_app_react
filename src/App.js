@@ -1,11 +1,13 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import Buscador from './componets/Buscador';
+import Header from './componets/Header';
 import axios from 'axios';
 
 function App() {
 
   const [ city, saveCity ] = useState('');
   const [ code, saveCode ] = useState(0);
+  const [ weather, saveWeather ] = useState({});
 
   useEffect(()=> {
     
@@ -18,8 +20,7 @@ function App() {
       const key ="zwYqaXaaX44qma1";
       const url = `https://api.tutiempo.net/json/?lan=${lan}&apid=${key}&lid=${code}`;
       const result = await axios.get(url);
-      console.log(url);
-      console.log(result);
+      saveWeather(result.data.hour_hour.hour1);
     }
 
     consultAPI();
@@ -33,8 +34,11 @@ function App() {
           saveCity={saveCity}
           saveCode={saveCode}
         />
+        <Header 
+          city={city}
+          weather={weather}
+        />
       </div>
-      <p>{city}</p>
     </Fragment>
   );
 }

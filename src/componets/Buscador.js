@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import '../data/pueblos.json';
 
-const Buscador = ({ saveCity, saveCode }) => {
+const Buscador = ({ saveCity, saveCode, saveWeather }) => {
     const element = <FontAwesomeIcon icon={faSearch} />
     
     const [ search, saveSearch ] = useState('');
@@ -19,7 +19,6 @@ const Buscador = ({ saveCity, saveCode }) => {
         const datacity = require('../data/pueblos.json');
         
         if(city.trim() === '' || isNaN(city) === false){
-            console.log("error");
             return;
         }
 
@@ -29,9 +28,9 @@ const Buscador = ({ saveCity, saveCode }) => {
             saveCity(result[0].name);
             saveCode(result[0].id);
         }else{
-            console.log("error");
             saveCity('');
             saveCode('');
+            saveWeather('');
             return;
         }
     }

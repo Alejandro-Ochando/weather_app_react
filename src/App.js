@@ -33,6 +33,7 @@ function App() {
         <Buscador 
           saveCity={saveCity}
           saveCode={saveCode}
+          saveWeather={saveWeather}
         />
         <Header 
           city={city}

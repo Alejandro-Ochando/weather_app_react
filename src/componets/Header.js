@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import {ThermalSensation} from '../helper';
 
 const Header = ({ weather, city, temperatures }) => {
 
@@ -37,28 +38,34 @@ const Header = ({ weather, city, temperatures }) => {
     const weekend = WEEKEND[nWeekend];
 
     const town = city.charAt(0).toUpperCase() + city.slice(1) ;
+
     if(minutes < 10 ) minutes = '0'+minutes;
     if(hour < 10 ) hour = '0' + hour;
 
-    const { temperature, text} = weather;
-    const { temperature_max, temperature_min} = temperatures;
+    const { temperature, text} = weather;               
+    const { temperature_max, temperature_min, wind} = temperatures;
+
+     //Sensacion termica
+     const t = temperature;
+     const v = wind ;
+     const sensation = ThermalSensation(t,v);
     
     const header = (Object.keys(weather).length !== 0)
-    ?   (<div className="center">
+    ?   (<Fragment>
             <p className="city">{town}</p>
             <p className="date">{weekend}, {day} de {month} {hour}:{minutes}</p>
             <div className="box-grade">
                 <h1 className="temperature">{temperature}</h1>
                 <span className="centigrate">º</span>
             </div>
-            <p className="temperatures">{temperature_max}º / {temperature_min}º</p>
+    <p className="temperatures">{temperature_max}º / {temperature_min}º Sensación térmica {sensation}º</p>
             <p className="prediction">{text}</p>
-        </div>)
+        </Fragment>)
     :   (<p>Escribe una localizacion</p>);
 
 
     return(
-        <div>
+        <div className="center">
            {header} 
         </div>
     );

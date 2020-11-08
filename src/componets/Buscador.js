@@ -46,9 +46,8 @@ const Buscador = ({ saveCity, saveCode, saveWeather, saveTemperatures }) => {
                     onSubmit={handlerSubmit}
                 >
                     <div className="row">
-                        <div className="col s12">
+                        <div className="col s12 height">
                             {/*<p className="location-text">Localización:</p>*/}
-                            
                             <div className="input-field inline">
                                 <input 
                                     type="text"

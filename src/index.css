@@ -18,6 +18,10 @@ body {
   background-repeat: no-repeat;   
 }
 
+.height{
+  height: 50px;
+}
+
 .location-text {
   display: inline-block;
   padding-right: 1rem;
@@ -65,7 +69,7 @@ input[type=text]:not(.browser-default):focus:not([readonly]) {
   justify-content: center;
   margin: 0;
   padding: 0;
-  height: 130px ;
+  height: 130px;
 }
 .temperature{
  font-size: 50pt;

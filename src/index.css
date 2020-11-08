@@ -45,3 +45,43 @@ input[type=text]:not(.browser-default):focus:not([readonly]) {
   border-bottom: 1px solid white !important;
   box-shadow: 0 1px 0 0 rgb(172, 172, 243) !important;
 }
+
+.city, .temperature, .prediction, .centigrate, .temperatures{
+  color: white;
+}
+
+.city {
+  font-size: 16px;
+  margin:0;
+}
+
+.date{
+  color:rgb(177, 174, 174);
+  margin:0;
+}
+
+.box-grade{
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  height: 130px ;
+}
+.temperature{
+ font-size: 50pt;
+ display: inline-block;
+}
+.centigrate{
+  font-size: 25pt;
+  display: inline-block;
+  align-self: center;
+  padding-left: 0.5rem;
+  padding-bottom: 1rem;
+}
+.temperatures{
+  font-size: 13pt;
+}
+.prediction{
+  margin:0;
+  font-weight: bold;
+}

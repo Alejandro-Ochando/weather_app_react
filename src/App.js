@@ -8,6 +8,7 @@ function App() {
   const [ city, saveCity ] = useState('');
   const [ code, saveCode ] = useState(0);
   const [ weather, saveWeather ] = useState({});
+  const [ temperatures, saveTemperatures ] = useState({});
 
   useEffect(()=> {
     
@@ -21,6 +22,8 @@ function App() {
       const url = `https://api.tutiempo.net/json/?lan=${lan}&apid=${key}&lid=${code}`;
       const result = await axios.get(url);
       saveWeather(result.data.hour_hour.hour1);
+      saveTemperatures(result.data.day1);
+      console.log("primera vez");
     }
 
     consultAPI();
@@ -34,10 +37,12 @@ function App() {
           saveCity={saveCity}
           saveCode={saveCode}
           saveWeather={saveWeather}
+          saveTemperatures={saveTemperatures}
         />
         <Header 
           city={city}
           weather={weather}
+          temperatures={temperatures}
         />
       </div>
     </Fragment>

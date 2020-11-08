@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import '../data/pueblos.json';
 
-const Buscador = ({ saveCity, saveCode, saveWeather }) => {
+const Buscador = ({ saveCity, saveCode, saveWeather, saveTemperatures }) => {
     const element = <FontAwesomeIcon icon={faSearch} />
     
     const [ search, saveSearch ] = useState('');
@@ -31,6 +31,7 @@ const Buscador = ({ saveCity, saveCode, saveWeather }) => {
             saveCity('');
             saveCode('');
             saveWeather('');
+            saveTemperatures('');
             return;
         }
     }

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Header = ({ weather, city }) => {
+const Header = ({ weather, city, temperatures }) => {
 
     const MESES = [
         "Enero",
@@ -41,13 +41,18 @@ const Header = ({ weather, city }) => {
     if(hour < 10 ) hour = '0' + hour;
 
     const { temperature, text} = weather;
+    const { temperature_max, temperature_min} = temperatures;
     
     const header = (Object.keys(weather).length !== 0)
-    ?   (<div>
-            <h2>{town}</h2>
-            <p>{weekend}, {day} de {month} {hour}:{minutes}</p>
-            <h1>{temperature}º</h1>
-            <p>{text}</p>
+    ?   (<div className="center">
+            <p className="city">{town}</p>
+            <p className="date">{weekend}, {day} de {month} {hour}:{minutes}</p>
+            <div className="box-grade">
+                <h1 className="temperature">{temperature}</h1>
+                <span className="centigrate">º</span>
+            </div>
+            <p className="temperatures">{temperature_max}º / {temperature_min}º</p>
+            <p className="prediction">{text}</p>
         </div>)
     :   (<p>Escribe una localizacion</p>);
 

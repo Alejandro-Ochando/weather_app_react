@@ -1,62 +1,255 @@
 .city, .temperature, .prediction, .centigrate {
     color:#e8faff;
-  }
-  .temperatures {
+}
+
+.temperatures {
     color: #d1e2ff;
-  }
-  
-  .city {
+}
+
+.city {
     font-size: 15pt;
     margin:0;
-  }
+}
   
-  .date{
+.date{
     color:#a9b1f8;
     margin:0;
-    
-  }
+}
   
-  .box-grade{
+.box-grade{
     display: flex;
     justify-content: center;
     margin: 0;
     padding: 0;
     height: 130px;
-  }
-  .temperature{
+}
+
+.temperature{
    font-size: 55pt;
    display: inline-block;
-  }
-  .centigrate{
+}
+
+.centigrate{
     font-size: 25pt;
     display: inline-block;
     align-self: center;
     padding-left: 0.3rem;
     padding-bottom: 1rem;
-  }
-  .temperatures{
+}
+.temperatures{
     font-size: 13pt;
-  }
-  .prediction{
+}
+
+.prediction{
     margin:0;
     font-size: 13pt;
-  }
+}
   
-  .wi { 
-    padding-top: 3.5rem;
+
+.container-wi{
+    padding-top: 3rem;
     padding-right: 1rem;
+    
+}
+
+.wi { 
+    padding: 0 0 2px 0;
     font-size: 38pt;
-    color: rgb(255, 255, 255);
-    /*Animacion por icono*/
+    padding: 1rem;
+}
+
+
+
+
+
+.wi-day-sunny {
+    color: #f7d303;
+    animation: 10s rotate linear infinite;
+    -webkit-animation: 10s rotate linear infinite;
+    transform-origin: 50% 50%;
+    -webkit-transform-origin: 50% 50%;
+    animation-direction: reverse;
+    animation-name: turn-sun;
+}
+
+
+@keyframes turn-sun {
+
+    0%   { color:#f7d303;}
+    25%  { color: #ecc904;}
+    50%  { color: #f1e298;}
+    75%  { color: #ecc904;}
+    100% { color: #f7d303;}
+
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+  }
+
+@-webkit-keyframes turn-sun {
+    from {
+          -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+} 
+
+
+
+
+.wi-day-cloudy-high {
+    animation-name:day-cloudy-high;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    background: -moz-linear-gradient(316deg,  #ffd904 28%, rgba(255,255,255,1) 48%, #fafaf5 100%);
+    background: -webkit-linear-gradient(316deg,  #ffd904 28%, rgba(255,255,255,1) 48%,  #fafaf5 100%);
+    background: linear-gradient(316deg, #ffd904 28%, rgb(255,255,255,1) 48%, #fafaf5 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes day-cloudy-high {
+    0%   { margin-top: 3px;}
+    25%  { margin-top: 4px;}
+    50%  { margin-top: 5px;}
+    75%  { margin-top: 4px;}
+    100% { margin-top: 3px;}
+}
+
+
+
+
+
+.wi-day-cloudy {
+    animation-name:wi-day-cloudy;
+    margin-top:1rem;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    background: -moz-linear-gradient(225deg,  #ffd904 28%, rgba(255,255,255,1) 48%, #575656 100%);
+    background: -webkit-linear-gradient(225deg,  #ffd904 28%, rgba(255,255,255,1) 48%,  #575656  100%);
+    background: linear-gradient(225deg, #ffd904 28%, rgb(255,255,255,1) 48%, #575656  100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes wi-day-cloudy {
+    0%   { margin-bottom: 3px;}
+    25%  { margin-bottom: 4px;}
+    50%  { margin-bottom: 5px;}
+    75%  { margin-bottom: 4px;}
+    100% { margin-bottom: 3px;}
+}
+
+
+
+
+
+.wi-fog {
+    animation-name: wi-fog;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    text-shadow: 3px 4px 5px rgb(212, 216, 212);
+    color: rgb(216, 214, 214);
+}
+
+@keyframes wi-fog {
+    0%   { padding-top: 3px;}
+    25%  { padding-top: 6px;}
+    50%  { padding-top: 8px;}
+    75%  { padding-top: 6px;}
+    100% { padding-top: 4px;}
+}
+
+
+
+
+.wi-cloud{
+    animation-name: wi-cloud;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    /*color:rgba(190, 186, 186, 0.931) ;*/
+    /*text-shadow: 1px 3px 9px rgb(49, 49, 49);*/
+
+    background: -moz-linear-gradient(180deg,  #d6d6d4 20%,  #949393 100%);
+    background: -webkit-linear-gradient(180deg,  #d6d6d4 20%,   #949393  100%);
+    background: linear-gradient(180deg, #d6d6d4 20%, #949393   100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes  wi-cloud {
+    0%   { padding-top: 3px;}
+    25%  { padding-top: 6px;}
+    50%  { padding-top: 8px;}
+    75%  { padding-top: 6px;}
+    100% { padding-top: 4px;}
+}
+
+
+.wi-cloudy{
+    animation-name: wi-cloudy;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    /*color:rgba(190, 186, 186, 0.931) ;*/
+    text-shadow: 1px 3px 9px rgb(49, 49, 49);
+    background: -moz-linear-gradient(180deg,  #d6d6d4 20%,  #5c5b5b 100%);
+    background: -webkit-linear-gradient(180deg,  #d6d6d4 20%,   #5c5b5b  100%);
+    background: linear-gradient(180deg, #d6d6d4 20%, #5c5b5b   100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes  wi-cloudy {
+    0%   { padding-top: 3px;}
+    25%  { padding-top: 6px;}
+    50%  { padding-top: 8px;}
+    75%  { padding-top: 6px;}
+    100% { padding-top: 4px;}
+}
+
+
+/*Por hacer*/
+.wi-showers{
+    animation-name: wi-cloudy;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+   
+}
+
+@keyframes  wi-showers {
+    0%   { padding-top: 3px;}
+    25%  { padding-top: 6px;}
+    50%  { padding-top: 8px;}
+    75%  { padding-top: 6px;}
+    100% { padding-top: 4px;}
+}
+
+
+/*PLANTILLA
+.wi-day-sunny{
+    color: #f7d303;
     animation-name: example;
     animation-duration: 3s;
     animation-iteration-count: infinite;
-  }
-  /*Ejemplo hay que cambiarlo segun icono*/
-  @keyframes example {
+}
+
+@keyframes example {
     0%   { margin-top:6px;}
     25%  { margin-top: 10px;}
     50%  { margin-top: 12px;}
     75%  { margin-top: 10px;}
     100% { margin-top: 6px;}
-  }
+}
+*/

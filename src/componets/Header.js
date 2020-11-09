@@ -50,7 +50,9 @@ const Header = ({ weather, city, temperatures }) => {
     const v = wind ;
     const sensation = ThermalSensation(t,v);
 
-    const weatherIcon = iconWeather(parseInt(icon));
+    //pruebas:
+    const weatherIcon = iconWeather(parseInt(18))
+    //const weatherIcon = iconWeather(parseInt(icon));
     
     
     const header = (Object.keys(weather).length > 0)
@@ -59,7 +61,9 @@ const Header = ({ weather, city, temperatures }) => {
             <p className="date">{weekend}, {day} de {month} {hour}:{minutes}</p>
             <div className="box-grade">
                 {/*MIRAR LOS ICONOS  DE LA WEB Y BUSCAR EN LOS INSTALADOS SU NUMERO CORRESPONDIENTE*/}
-                <i className={`wi ${weatherIcon}`} />
+                <div className="container-wi center">
+                    <i className={`wi ${weatherIcon}`} />
+                </div>
                 <h1 className="temperature">{temperature}</h1>
                 <span className="centigrate">º</span>
             </div>

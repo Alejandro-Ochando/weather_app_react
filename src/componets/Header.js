@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import {ThermalSensation} from '../helper';
+import {ThermalSensation, iconWeather} from '../helper';
 
 const Header = ({ weather, city, temperatures }) => {
 
@@ -42,19 +42,32 @@ const Header = ({ weather, city, temperatures }) => {
     if(minutes < 10 ) minutes = '0'+minutes;
     if(hour < 10 ) hour = '0' + hour;
 
-    const { temperature, text} = weather;               
-    const { temperature_max, temperature_min, wind} = temperatures;
+
+
+    const { temperature, text, icon} = weather;               
+    const { temperature_max, temperature_min, wind } = temperatures;
+    
+
+    
 
      //Sensacion termica
      const t = temperature;
      const v = wind ;
      const sensation = ThermalSensation(t,v);
     
-    const header = (Object.keys(weather).length !== 0)
+   
+    
+    const weatherIcon = iconWeather(parseInt(icon));
+    
+    
+    
+    
+    const header = (Object.keys(weather).length > 0)
     ?   (<Fragment>
             <p className="city">{town}</p>
             <p className="date">{weekend}, {day} de {month} {hour}:{minutes}</p>
             <div className="box-grade">
+                <i className={`wi ${weatherIcon}`} />
                 <h1 className="temperature">{temperature}</h1>
                 <span className="centigrate">º</span>
             </div>

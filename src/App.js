@@ -12,7 +12,7 @@ function App() {
 
   useEffect(()=> {
     
-    if(code === 0 || code === '' ){
+    if(code === 0 || code === '' || city === '' ){
       return;
     }
 

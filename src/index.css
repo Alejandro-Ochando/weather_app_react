@@ -50,18 +50,22 @@ input[type=text]:not(.browser-default):focus:not([readonly]) {
   box-shadow: 0 1px 0 0 rgb(172, 172, 243) !important;
 }
 
-.city, .temperature, .prediction, .centigrate, .temperatures{
-  color: white;
+.city, .temperature, .prediction, .centigrate {
+  color:#e8faff;
+}
+.temperatures {
+  color: #d1e2ff;
 }
 
 .city {
-  font-size: 16px;
+  font-size: 15pt;
   margin:0;
 }
 
 .date{
-  color:rgb(177, 174, 174);
+  color:#a9b1f8;
   margin:0;
+  
 }
 
 .box-grade{
@@ -72,14 +76,14 @@ input[type=text]:not(.browser-default):focus:not([readonly]) {
   height: 130px;
 }
 .temperature{
- font-size: 50pt;
+ font-size: 55pt;
  display: inline-block;
 }
 .centigrate{
   font-size: 25pt;
   display: inline-block;
   align-self: center;
-  padding-left: 0.5rem;
+  padding-left: 0.3rem;
   padding-bottom: 1rem;
 }
 .temperatures{
@@ -87,5 +91,24 @@ input[type=text]:not(.browser-default):focus:not([readonly]) {
 }
 .prediction{
   margin:0;
-  font-weight: bold;
+  font-size: 13pt;
+}
+
+.wi { 
+  padding-top: 3.5rem;
+  padding-right: 1rem;
+  font-size: 38pt;
+  color: white;
+  /*Animacion por icono*/
+  animation-name: example;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+/*Ejemplo hay que cambiarlo segun icono*/
+@keyframes example {
+  0%   { margin-top:0px;}
+  25%  { margin-top: 5px;}
+  50%  { margin-top: 12px;}
+  75%  { margin-top: 10px;}
+  100% { margin-top: 6px;}
 }

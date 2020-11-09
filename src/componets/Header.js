@@ -1,5 +1,8 @@
 import React, { Fragment } from 'react';
-import {ThermalSensation, iconWeather} from '../helper';
+import './Header.css';
+import { ThermalSensation, iconWeather, getWeekNumber,  getMonthNumber, 
+    getDay, getHour, getMinute
+} from '../helper';
 
 const Header = ({ weather, city, temperatures }) => {
 
@@ -28,38 +31,26 @@ const Header = ({ weather, city, temperatures }) => {
         "Sabado"
     ];
 
-    const nWeekend = new Date().getDay();
-    const day = new Date().getDate();
-    const nMonth = new Date().getMonth();
-    let hour = new Date().getHours();
-    let minutes = new Date().getMinutes();
+    const weekend = WEEKEND[getWeekNumber()];
+    const day = getDay();
+    const month = MESES[getMonthNumber()];
+    let hour = getHour();
+    let minutes = getMinute();
     
-    const month = MESES[nMonth];
-    const weekend = WEEKEND[nWeekend];
-
     const town = city.charAt(0).toUpperCase() + city.slice(1) ;
 
     if(minutes < 10 ) minutes = '0'+minutes;
     if(hour < 10 ) hour = '0' + hour;
 
-
-
     const { temperature, text, icon} = weather;               
     const { temperature_max, temperature_min, wind } = temperatures;
-    
 
-    
+    //Sensacion termica
+    const t = temperature;
+    const v = wind ;
+    const sensation = ThermalSensation(t,v);
 
-     //Sensacion termica
-     const t = temperature;
-     const v = wind ;
-     const sensation = ThermalSensation(t,v);
-    
-   
-    
     const weatherIcon = iconWeather(parseInt(icon));
-    
-    
     
     
     const header = (Object.keys(weather).length > 0)
@@ -67,6 +58,7 @@ const Header = ({ weather, city, temperatures }) => {
             <p className="city">{town}</p>
             <p className="date">{weekend}, {day} de {month} {hour}:{minutes}</p>
             <div className="box-grade">
+                {/*MIRAR LOS ICONOS  DE LA WEB Y BUSCAR EN LOS INSTALADOS SU NUMERO CORRESPONDIENTE*/}
                 <i className={`wi ${weatherIcon}`} />
                 <h1 className="temperature">{temperature}</h1>
                 <span className="centigrate">º</span>

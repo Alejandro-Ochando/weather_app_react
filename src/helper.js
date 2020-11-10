@@ -45,13 +45,14 @@ export function iconWeather(icon){
         case 18:
             return("wi-showers");
         case 19:
-        case  27:
+        case 27:
             return("wi-rain"); 
         case 21:
-            return("wi-day-thunderstorm");
+            //return("wi-day-thunderstorm");
         case 23:
-        case 22:        
-            return("wi-thunderstorm");
+        case 22:
+            return("wi-lightning");        
+            //return("wi-thunderstorm");
         case 28:
             return("wi-sleet");
         case 29:
@@ -62,9 +63,9 @@ export function iconWeather(icon){
             return("wi-snow");     
         case 33:
             return("wi-day-showers");        
-        case 4n:
-            return("Parcialmente nuboso de noche");       
+        case "4n":
+            return("wi-night-alt-cloudy");       
         default:
-            console.log("no existe");      
+            return("wi-na");      
     }
 }

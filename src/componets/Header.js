@@ -50,10 +50,11 @@ const Header = ({ weather, city, temperatures }) => {
     const v = wind ;
     const sensation = ThermalSensation(t,v);
 
-    //pruebas:
-    const weatherIcon = iconWeather(parseInt(18))
-    //const weatherIcon = iconWeather(parseInt(icon));
-    
+    const weatherIcon = (hour > 18 || hour < 8) 
+        ?
+            iconWeather(icon)
+        :
+            iconWeather(parseInt(icon));
     
     const header = (Object.keys(weather).length > 0)
     ?   (<Fragment>

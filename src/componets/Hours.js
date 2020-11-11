@@ -4,20 +4,23 @@ import './Hours.css';
 
 
 const Hours = ({ days }) => {
-    console.log(days);
+    console.log();
+    if(days.length === 0 || days.length === '') return null;
+    const prueba= Object.values(days).slice(0, 6);
+    
     /* */
     return ( 
         <div className="container mt-2 center">
-            <div className="row" >
-                <div className="col m-12">
-                    {Object.values(days).map( day => (
+            <div className="row m12" >
+                
+                    {Object.values(prueba).map( day => (
                         <ShowTime 
                             /*key={day.hour_data}*/
                             day={day}
                             key={day.hour_data}
                         />
                     ))}
-                </div> 
+                
             </div>   
         </div>
     );

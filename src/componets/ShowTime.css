@@ -1,0 +1,190 @@
+div.wi-static > i {
+    font-size: 20pt;
+}
+
+
+div.wi-static > i.wi-day-sunny {
+    color: #f7d303;
+    animation: 10s rotate linear infinite;
+    -webkit-animation: 10s rotate linear infinite;
+    transform-origin: 50% 50%;
+    -webkit-transform-origin: 50% 50%;
+    animation-direction: reverse;
+    animation-name: turn-sun;
+}
+
+div.wi-static > i.wi-day-cloudy-high {
+    background: -moz-linear-gradient(316deg,  #ffd904 28%, rgba(255,255,255,1) 48%, #fafaf5 100%);
+    background: -webkit-linear-gradient(316deg,  #ffd904 28%, rgba(255,255,255,1) 48%,  #fafaf5 100%);
+    background: linear-gradient(316deg, #ffd904 28%, rgb(255,255,255,1) 48%, #fafaf5 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+div.wi-static > i.wi-night-alt-cloudy-high {
+    background: -moz-linear-gradient(340deg,  #ffd904 28%, rgba(255,255,255,1) 48%, #fafaf5 100%);
+    background: -webkit-linear-gradient(340deg,  #ffd904 28%, rgba(255,255,255,1) 48%,  #fafaf5 100%);
+    background: linear-gradient(340deg, #ffd904 28%, rgb(255,255,255,1) 48%, #fafaf5 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+div.wi-static> i.wi-day-cloudy {
+    background: -moz-linear-gradient(225deg,  #ffd904 28%, rgba(255,255,255,1) 48%, #575656 100%);
+    background: -webkit-linear-gradient(225deg,  #ffd904 28%, rgba(255,255,255,1) 48%,  #575656  100%);
+    background: linear-gradient(225deg, #ffd904 28%, rgb(255,255,255,1) 48%, #575656  100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+div.wi-static > i.wi-night-alt-cloudy {
+    background: -moz-linear-gradient(225deg,  #ffd904 28%, rgba(255,255,255,1) 48%, #575656 100%);
+    background: -webkit-linear-gradient(225deg,  #ffd904 28%, rgba(255,255,255,1) 48%,  #575656  100%);
+    background: linear-gradient(225deg, #ffd904 28%, rgb(255,255,255,1) 48%, #575656  100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+div.wi-static > i.wi-fog {
+    text-shadow: 3px 4px 5px rgb(212, 216, 212);
+    color: rgb(216, 214, 214);
+}
+
+div.wi-static > i.wi-cloud{
+    background: -moz-linear-gradient(180deg,  #d6d6d4 20%,  #949393 100%);
+    background: -webkit-linear-gradient(180deg,  #d6d6d4 20%,   #949393  100%);
+    background: linear-gradient(180deg, #d6d6d4 20%, #949393   100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+div.wi-static > i.wi-cloudy{
+    text-shadow: 1px 3px 9px rgb(49, 49, 49);
+    background: -moz-linear-gradient(180deg,  #d6d6d4 20%,  #5c5b5b 100%);
+    background: -webkit-linear-gradient(180deg,  #d6d6d4 20%,   #5c5b5b  100%);
+    background: linear-gradient(180deg, #d6d6d4 20%, #5c5b5b   100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+div.wi-static > i.wi-showers{
+    background: -moz-linear-gradient(365deg,  #16d1d1 28%, rgb(180, 236, 243) 33%, #575656 50%);
+    background: -webkit-linear-gradient(365deg,  #16d1d1 28%, rgba(180, 236, 243) 33%,  #575656  50%);
+    background: linear-gradient(365deg, #16d1d1 28%, rgb(180, 236, 243) 33%, #575656  50%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+div.wi-static >  i.wi-rain {
+    background: -moz-linear-gradient(362deg,  #16d1d1 28%, rgb(180, 236, 243) 34%, #575656 50%);
+    background: -webkit-linear-gradient(362deg,  #16d1d1 28%, rgba(180, 236, 243) 34%,  #575656  50%);
+    background: linear-gradient(362deg, #16d1d1 28%, rgb(180, 236, 243) 34%, #575656  50%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+div.wi-static > i.wi-lightning{
+    color: rgb(254, 233, 0);
+}
+
+div.wi-static > i.wi-sleet {
+    background: -moz-linear-gradient(362deg,  #84c8f5 15%, rgb(230, 242, 243) 29%, #cfcece 50%);
+    background: -webkit-linear-gradient(362deg,  #84c8f5 15%, rgba(230, 242, 243) 29%,  #cfcece 50%);
+    background: linear-gradient(362deg, #84c8f5 15%, rgb(230, 242, 243) 29%, #cfcece  50%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+div.wi-static > i.wi-day-snow {
+    background: -moz-linear-gradient(40deg,  #ffffff 30%, #cfcece 55%, #f7d303 70%);
+    background: -webkit-linear-gradient(40deg,  #ffffff 30%, #cfcece 55%, #f7d303 70%);
+    background: linear-gradient(40deg, #ffffff 30%, #cfcece 55%, #f7d303  70%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+div.wi-static > i.wi-night-alt-snow {
+    background: -moz-linear-gradient(40deg,  #ffffff 30%, #cfcece 55%, #f7d303 70%);
+    background: -webkit-linear-gradient(40deg,  #ffffff 30%, #cfcece 55%, #f7d303 70%);
+    background: linear-gradient(40deg, #ffffff 30%, #cfcece 55%, #f7d303  70%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+div.wi-static > i.wi-snow {
+    background: -moz-linear-gradient(0deg,  #ffffff 30%, #afaeae 55%);
+    background: -webkit-linear-gradient(0deg,  #ffffff 30%, #afaeae  55%);
+    background: linear-gradient(0deg, #ffffff 30%, #afaeae  55%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 1px 1.5px 3px rgb(212, 216, 212);
+    color: rgb(216, 214, 214);
+}
+
+div.wi-static > i.wi-day-showers {
+    background: -moz-linear-gradient(20deg,  #6bbbf0 30%, #cfcece 35%, #afaeae 55%, #f7d303 80%);
+    background: -webkit-linear-gradient(20deg,  #6bbbf0 30%, #cfcece 35%,#afaeae 55%, #f7d303 80%);
+    background: linear-gradient(20deg, #6bbbf0 30%, #cfcece 35%,#afaeae 55%, #f7d303 80%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+div.wi-static > i.wi-night-alt-showers {
+    background: -moz-linear-gradient(12deg,  #6bbbf0 30%, #cfcece 33%, #afaeae 55%, #f7d303 80%);
+    background: -webkit-linear-gradient(12deg,  #6bbbf0 30%, #cfcece 33%,#afaeae 55%, #f7d303 80%);
+    background: linear-gradient(12deg, #6bbbf0 30%, #cfcece 33%,#afaeae 55%, #f7d303 80%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.hour-data, .temperature-hour {
+    color: white;
+}
+
+.a{
+    display: flex;
+    justify-content:center;
+    height: 80px;
+    align-items:end;
+}
+.prueba {
+    
+    border-radius: 1rem;
+    background-color: #fdfcfc;
+    width: 12px;
+    justify-content: center;
+}
+
+.tem{
+    margin-top: -22px !important;
+    color: white;
+}
+
+

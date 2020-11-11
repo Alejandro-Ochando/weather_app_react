@@ -7,7 +7,7 @@
 }
 
 .city {
-    font-size: 15pt;
+    font-size: 17pt;
     margin:0;
 }
   
@@ -25,7 +25,7 @@
 }
 
 .temperature{
-   font-size: 55pt;
+   font-size: 60pt;
    display: inline-block;
 }
 
@@ -60,7 +60,7 @@
 
 
 /*Iconos*/
-.wi-day-sunny {
+div.container-wi > .wi-day-sunny {
     color: #f7d303;
     animation: 10s rotate linear infinite;
     -webkit-animation: 10s rotate linear infinite;
@@ -97,7 +97,7 @@
 }    
 
 
-.wi-day-cloudy-high {
+div.container-wi > .wi-day-cloudy-high {
     animation-name:wi-day-cloudy-high;
     animation-duration: 7s;
     animation-iteration-count: infinite;
@@ -117,7 +117,7 @@
     100% { margin-top: 3px;}
 }
 
-.wi-night-alt-cloudy-high{
+div.container-wi > .wi-night-alt-cloudy-high{
     animation-name:wi-night-alt-cloudy-high;
     animation-duration: 7s;
     animation-iteration-count: infinite;
@@ -138,7 +138,7 @@
 }
 
 
-.wi-day-cloudy {
+div.container-wi > .wi-day-cloudy {
     animation-name:wi-day-cloudy;
     margin-top:1rem;
     animation-duration: 7s;
@@ -159,7 +159,7 @@
     100% { margin-bottom: 3px;}
 }
 
-.wi-night-alt-cloudy {
+div.container-wi > .wi-night-alt-cloudy {
     animation-name:wi-night-alt-cloudy;
     margin-top:1rem;
     animation-duration: 7s;
@@ -181,7 +181,7 @@
 }
 
 
-.wi-fog {
+div.container-wi > .wi-fog {
     animation-name: wi-fog;
     animation-duration: 3s;
     animation-iteration-count: infinite;
@@ -197,7 +197,7 @@
 }
 
 
-.wi-cloud{
+div.container-wi > .wi-cloud{
     animation-name: wi-cloud;
     animation-duration: 3s;
     animation-iteration-count: infinite;
@@ -220,7 +220,7 @@
 }
 
 
-.wi-cloudy{
+div.container-wi > .wi-cloudy{
     animation-name: wi-cloudy;
     animation-duration: 3s;
     animation-iteration-count: infinite;
@@ -243,7 +243,7 @@
 }
 
 
-.wi-showers{
+div.container-wi > .wi-showers{
     animation-name: wi-showers;
     animation-duration: 3s;
     animation-iteration-count: infinite;
@@ -264,7 +264,7 @@
 }
 
 
-.wi-rain {
+div.container-wi >  .wi-rain {
     animation-name: wi-rain;
     animation-duration: 3s;
     animation-iteration-count: infinite;
@@ -285,7 +285,7 @@
 }
 
 
-.wi-lightning{
+div.container-wi > .wi-lightning{
     animation-name: wi-lightning;
     animation-duration: 3s;
     animation-iteration-count: infinite;
@@ -300,7 +300,7 @@
 }
 
 
-.wi-sleet {
+div.container-wi > .wi-sleet {
     animation-name: wi-sleet;
     animation-duration: 3s;
     animation-iteration-count: infinite;
@@ -321,7 +321,7 @@
 }
 
 
-.wi-day-snow {
+div.container-wi > .wi-day-snow {
     animation-name: wi-day-snow;
     animation-duration: 3s;
     animation-iteration-count: infinite;
@@ -341,7 +341,7 @@
     100% { padding-top: 14px;}
 }
 
-.wi-night-alt-snow {
+div.container-wi > .wi-night-alt-snow {
     animation-name: wi-night-alt-snow;
     animation-duration: 3s;
     animation-iteration-count: infinite;
@@ -362,7 +362,7 @@
 }
 
 
-.wi-snow {
+div.container-wi > .wi-snow {
     animation-name: wi-snow;
     animation-duration: 3s;
     animation-iteration-count: infinite;
@@ -385,7 +385,7 @@
 }
 
 
-.wi-day-showers {
+div.container-wi > .wi-day-showers {
     animation-name: wi-day-showers;
     animation-duration: 3s;
     animation-iteration-count: infinite;
@@ -405,7 +405,7 @@
     100% { padding-top: 14px;}
 }
 
-.wi-night-alt-showers {
+div.container-wi > .wi-night-alt-showers {
     animation-name: wi-night-alt-showers;
     animation-duration: 3s;
     animation-iteration-count: infinite;

@@ -19,11 +19,11 @@ export function getMinute() {
     return new Date().getMinutes();
 }
 
-
+//Formula sensacion termica
 export function ThermalSensation(t,v){
     return (0.045*(5.27*Math.sqrt(v)+10.45-0.28*v)*(t-16)+16).toFixed(0);
 }
-/*TESTEAR ICONOS Y PONER LOS DE NOCHE*/ 
+
 export function iconWeather(icon){
     switch(icon) {
 
@@ -110,3 +110,24 @@ export function iconWeather(icon){
             return("wi-na");      
     }
 }
+
+export function iconWind(iconwind){
+    switch(iconwind) {
+    case"N":
+        return("wi-towards-n");
+    case"NE":
+        return("wi-towards-ene");
+    case"E":
+        return("wi-towards-e");
+    case"SE":
+        return("wi-towards-se");
+    case"S":
+        return("wi-towards-s");
+    case"SO":
+        return("wi-towards-sw");
+    case"O":
+        return("wi-towards-w");
+    case"NO":
+        return("wi-towards-nw");
+    }
+}    

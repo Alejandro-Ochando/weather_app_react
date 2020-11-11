@@ -225,7 +225,7 @@ div.container-wi > .wi-cloudy{
     animation-duration: 3s;
     animation-iteration-count: infinite;
     /*color:rgba(190, 186, 186, 0.931) ;*/
-    text-shadow: 1px 3px 9px rgb(49, 49, 49);
+    text-shadow: 1px 3px 6px rgb(49, 49, 49);
     background: -moz-linear-gradient(180deg,  #d6d6d4 20%,  #5c5b5b 100%);
     background: -webkit-linear-gradient(180deg,  #d6d6d4 20%,   #5c5b5b  100%);
     background: linear-gradient(180deg, #d6d6d4 20%, #5c5b5b   100%);

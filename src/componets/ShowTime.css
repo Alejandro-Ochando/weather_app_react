@@ -69,7 +69,7 @@ div.wi-static > i.wi-cloud{
 }
 
 div.wi-static > i.wi-cloudy{
-    text-shadow: 1px 3px 9px rgb(49, 49, 49);
+    text-shadow: 1px 1px 4px rgb(49, 49, 49);
     background: -moz-linear-gradient(180deg,  #d6d6d4 20%,  #5c5b5b 100%);
     background: -webkit-linear-gradient(180deg,  #d6d6d4 20%,   #5c5b5b  100%);
     background: linear-gradient(180deg, #d6d6d4 20%, #5c5b5b   100%);
@@ -172,19 +172,29 @@ div.wi-static > i.wi-night-alt-showers {
     display: flex;
     justify-content:center;
     height: 80px;
-    align-items:end;
+    align-items:flex-end;
 }
 .prueba {
     
     border-radius: 1rem;
-    background-color: #fdfcfc;
-    width: 12px;
+    background-color: #f9f6f5;
+    width: 10px;
     justify-content: center;
 }
 
 .tem{
-    margin-top: -22px !important;
-    color: white;
+    margin-top: -22px;
+    color: #f9f6f5;
 }
 
+.wi-wind{
+    padding :1rem;
+    font-size: 20pt;
+}
+
+.wi-towards-n,.wi-towards-ene,.wi-towards-e,
+.wi-towards-se,.wi-towards-s,.wi-towards-sw,
+.wi-towards-w,.wi-towards-nw {
+    color: #f9f6f5;
+}
 

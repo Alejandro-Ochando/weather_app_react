@@ -50,7 +50,7 @@ const Header = ({ weather, city, temperatures }) => {
     const v = wind ;
     const sensation = ThermalSensation(t,v);
     
-    const weatherIcon = (hour > 18 || hour < 8) 
+    const weatherIcon = (hour > 18 && hour < 8) 
         ?
             iconWeather(icon)
         :

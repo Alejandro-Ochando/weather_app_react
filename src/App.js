@@ -12,6 +12,7 @@ function App() {
   const [ weather, saveWeather ] = useState({});
   const [ temperatures, saveTemperatures ] = useState({});
   const [ hours, saveHours] = useState([]);
+  const [ day, saveDay ] = useState([]);
 
   useEffect(()=> {
     
@@ -27,7 +28,7 @@ function App() {
       saveWeather(result.data.hour_hour.hour1);
       saveTemperatures(result.data.day1);
       saveHours(result.data.hour_hour);
-      console.log(hours);
+      saveDay(result.data);
       console.log("primera vez");
     }
 
@@ -44,6 +45,7 @@ function App() {
           saveWeather={saveWeather}
           saveTemperatures={saveTemperatures}
           saveHours={saveHours}
+          saveDay={saveDay}
         />
         <Header 
           city={city}
@@ -54,7 +56,7 @@ function App() {
           hours={hours}
         />
         <Day
-        
+          day={day}
         />
       </div>
     </Fragment>

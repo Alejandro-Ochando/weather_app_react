@@ -3,15 +3,15 @@ import ShowTime from './ShowTime';
 import './Hours.css';
 
 
-const Hours = ({ days }) => {
-    if(days.length === 0 || days.length === '') return null;
+const Hours = ({ hours }) => {
+    if(hours.length === 0 || hours.length === '') return null;
     const screen = (window.screen.width);
     
-    let  forecastByHours = Object.values(days).slice(0, 6);
+    let  forecastByHours = Object.values(hours).slice(0, 6);
     let sizeForecast = 6;
     if(screen < 900 ){
         sizeForecast = 4;
-        forecastByHours = Object.values(days).slice(0, 4);
+        forecastByHours = Object.values(hours).slice(0, 4);
     }
    
     return ( 

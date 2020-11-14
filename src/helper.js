@@ -1,12 +1,12 @@
-//Obteniendo numero de la semana
+//Obteniendo el número de la semana
 export function getWeekNumber() {
     return new Date().getDay();
 }
-//Obteniendo el numero del dia
+//Obteniendo el número del dia
 export function getDay() {
     return new Date().getDate();
 }
-//Obteniendo el numero de mes
+//Obteniendo el número de mes
 export function getMonthNumber() {
     return new Date().getMonth();
 }
@@ -19,11 +19,12 @@ export function getMinute() {
     return new Date().getMinutes();
 }
 
-//Formula sensacion termica
+//Formula sensación térmica
 export function ThermalSensation(t,v){
     return (0.045*(5.27*Math.sqrt(v)+10.45-0.28*v)*(t-16)+16).toFixed(0);
 }
 
+//Busca el icono del tiempo
 export function iconWeather(icon){
     switch(icon) {
 
@@ -110,7 +111,7 @@ export function iconWeather(icon){
             return("wi-na");      
     }
 }
-
+//Busca el icono de la dirección del tiempo
 export function iconWind(iconwind){
     switch(iconwind) {
     case"N":

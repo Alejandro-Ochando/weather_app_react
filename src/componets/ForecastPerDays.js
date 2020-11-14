@@ -1,9 +1,11 @@
 import React from 'react';
 import { iconWeather, getHour } from '../helper';
+import './ForecastPerDays.css';
 
 const ForecastPerDays = ({days,  sizeForecast}) => {
     const { date, humidity, icon, temperature_max, temperature_min } = days
     let hour = getHour();
+    
     const weatherIcon = (hour <= 8 || hour >= 19) 
         ?
             iconWeather(icon)
@@ -16,9 +18,9 @@ const ForecastPerDays = ({days,  sizeForecast}) => {
     const baseValue = (reference < 0)?  -50 : 10;   
     const temperature = baseValue + (variation * 5);
     
-    const date1 = new Date(date);
-    const valor = date1.getUTCDay();
-    const DIASsemana = [
+    const objectDate = new Date(date);
+    const index = objectDate.getUTCDay();
+    const WEEKEND = [
         "Domingo",
         "Lunes",
         "Martes",
@@ -28,26 +30,24 @@ const ForecastPerDays = ({days,  sizeForecast}) => {
         "Sábado"
     ]  
     
-    const diaSEmana=(DIASsemana[valor]);
+    const weekendDay=(WEEKEND[index]);
 
     return ( 
-
-    <div className={`col ${sizeColumn}`}>
-        <div className="wi-static">
-            <p className="hour-data">{diaSEmana}</p>
-            <i className={`wi ${weatherIcon}`} />      
-            <p className="temperature-max-day">{temperature_max}º</p>
-            <div className="container-weather-day">
-                <div className="bar" style={{height: temperature + 'px'}}></div>
-            </div>
-            <p className="temperature-min-day center">{temperature_min}º</p>
-            <div className="container-humidity">
-                <p className="p-humidity">{humidity}</p>
-                <i className="wi wi-humidity" />
+        <div className={`col ${sizeColumn}`}>
+            <div className="wi-static">
+                <p className="hour-data">{weekendDay}</p>
+                <i className={`wi ${weatherIcon}`} />      
+                <p className="temperature-max-day">{temperature_max}º</p>
+                <div className="container-weather-day">
+                    <div className="bar" style={{height: temperature + 'px'}}></div>
+                </div>
+                <p className="temperature-min-day center">{temperature_min}º</p>
+                <div className="container-humidity">
+                    <p className="p-humidity">{humidity}</p>
+                    <i className="wi wi-humidity" />
+                </div>
             </div>
         </div>
-    </div>
-
      );
 }
  

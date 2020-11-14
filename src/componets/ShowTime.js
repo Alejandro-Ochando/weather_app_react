@@ -17,22 +17,21 @@ const ShowTime = ({day, sizeForecast}) => {
 
 
     return ( 
-    <div className={`col ${sizeColumn}`}>{/*Modificar columnas movil */}
-        <div className="wi-static">
-            <p className="hour-data">{hour_data}</p>
-            <i className={`wi ${weatherIcon}`} />            
-            <div className="a">
-                <div className="prueba" style={{height: (temperature*3)+ -20 + 'px'}}>
-                    <p className="tem">{temperature}º</p>
+        <div className={`col ${sizeColumn}`}>
+            <div className="wi-static">
+                <p className="hour-data">{hour_data}</p>
+                <i className={`wi ${weatherIcon}`} />            
+                <div className="container-weather-hour">
+                    <div className="bar" style={{height: (temperature*3)+ -20 + 'px'}}>
+                        <p className="temperature-showTime">{temperature}º</p>
+                    </div>
+                </div>
+                <div>
+                    <i className={`wi wi-wind ${windIcon}`} />
                 </div>
             </div>
-            <div>
-                <i className={`wi wi-wind ${windIcon}`} />
-            </div>
         </div>
-    </div>
-        
-        );
+    );
 }
  
 export default ShowTime;

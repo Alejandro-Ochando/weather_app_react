@@ -1,9 +1,10 @@
-import React, { Fragment, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Buscador from './componets/Buscador';
 import Header from './componets/Header';
 import Hours from './componets/Hours';
-import Day from './componets/Day';
+import Days from './componets/Days';
 import axios from 'axios';
+
 
 function App() {
 
@@ -34,10 +35,8 @@ function App() {
 
     consultAPI();
   },[code]);
-
-    
+  
   return (
-    <Fragment>
       <div className="container">
         <Buscador 
           saveCity={saveCity}
@@ -55,11 +54,10 @@ function App() {
         <Hours
           hours={hours}
         />
-        <Day
+        <Days
           day={day}
         />
       </div>
-    </Fragment>
   );
 }
 

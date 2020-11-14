@@ -1,49 +1,34 @@
-.city, .temperature, .prediction, .centigrate {
+.city, .temperature, .prediction, .centigrate, .temperatures {
     color:#e8faff;
-}
-
-.temperatures {
-    color: #d1e2ff;
 }
 
 .city {
     font-size: 17pt;
     margin:0;
 }
-.search-position-glass{
-    margin-top: 1rem;
-}
-@media(max-width: 850px){
-    .search-position-glass{
-    position: -webkit-sticky;
-    position: sticky;
-    top: 1rem;
-    border-radius: 2rem;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter:blur(5px);
-    -moz-backdrop-filter:blur(5px);
-    z-index:1;
-    }
-}
 
 .date{
     color:#a9b1f8;
     margin:0;
 }
-  
+
 .box-grade{
     display: flex;
     justify-content: center;
     margin: 0;
     padding: 0;
     height: 130px;
-    
 }
 
-.temperature{
-   font-size: 60pt;
-   display: inline-block;
+.container-wi{
+    padding-top: 3rem;
+    padding-right: 1rem;
+    
 }
+.temperature{
+    font-size: 60pt;
+    display: inline-block;
+ }
 
 .centigrate{
     font-size: 25pt;
@@ -52,6 +37,7 @@
     padding-left: 0.3rem;
     padding-bottom: 1rem;
 }
+
 .temperatures{
     font-size: 13pt;
 }
@@ -60,22 +46,14 @@
     margin:0;
     font-size: 13pt;
 }
-  
 
-.container-wi{
-    padding-top: 3rem;
-    padding-right: 1rem;
-    
-}
-
+/*Iconos*/
 .wi { 
     padding: 0 0 2px 0;
     font-size: 38pt;
     padding: 1rem;
 }
 
-
-/*Iconos*/
 div.container-wi > .wi-day-sunny {
     color: #f7d303;
     animation: 10s rotate linear infinite;

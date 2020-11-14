@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import '../data/pueblos.json';
+import './Buscador.css';
 
 const Buscador = ({ saveCity, saveCode, saveWeather, saveTemperatures, saveHours, saveDay }) => {
-    const element = <FontAwesomeIcon icon={faSearch} />
+    const magnifyingGlass = <FontAwesomeIcon icon={faSearch} />
     
     const [ search, saveSearch ] = useState('');
 
@@ -49,14 +50,13 @@ const Buscador = ({ saveCity, saveCode, saveWeather, saveTemperatures, saveHours
                 >
                     <div className="row">
                         <div className="col s12 height">
-                            {/*<p className="location-text">Localización:</p>*/}
                             <div className="input-field inline">
                                 <input 
                                     type="text"
                                     name="city"
                                     onChange={handlerChange}
                                 />
-                                <label className="location-label">{element}</label>
+                                <label className="location-label">{magnifyingGlass}</label>
                             </div>
                         </div>
                     </div>

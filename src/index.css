@@ -1,6 +1,5 @@
 *{
   font-family: 'Montserrat', sans-serif;
-  
 }
 
 html {
@@ -8,9 +7,6 @@ html {
   margin: 0;
   padding: 0;   
   margin:0;
-  padding: 0; 
-  
- 
 }
 
 body {
@@ -35,40 +31,4 @@ body {
   background-size: cover;
   height: 100vh;
   animation: image-generated 2s alternate infinite;
-  
-    
 }
-
-.height{
-  height: 50px;
-}
-
-.location-text {
-  display: inline-block;
-  padding-right: 1rem;
-  color: white;
-  font-weight: bold;
-  line-height: 200%;
-  margin-bottom: 0;
-}
-
-.location-label {
-  color:white !important;
-}
-
-.input-field input[type=text]:focus {
-  border-bottom: 1px solid white !important;
-  box-shadow: 0 1px 0 0 #000 !important;
-}
-
-input[type=text]:not(.browser-default) {
-  border-bottom: 1px solid white;
-  color: white;
-}
-
-input[type=text]:not(.browser-default):focus:not([readonly]) {
-  border-bottom: 1px solid white !important;
-  box-shadow: 0 1px 0 0 rgb(172, 172, 243) !important;
-}
-
-

@@ -3,10 +3,11 @@ import './Header.css';
 import { ThermalSensation, iconWeather, getWeekNumber,  getMonthNumber, 
     getDay, getHour, getMinute
 } from '../helper';
+import Fade from 'react-reveal/Fade';
 
 const Header = ({ weather, city, temperatures }) => {
 
-    const MESES = [
+    const MONTH = [
         "Enero",
         "Febrero",
         "Marzo",
@@ -33,7 +34,7 @@ const Header = ({ weather, city, temperatures }) => {
 
     const weekend = WEEKEND[getWeekNumber()];
     const day = getDay();
-    const month = MESES[getMonthNumber()];
+    const month = MONTH[getMonthNumber()];
     let hour = getHour();
     let minutes = getMinute();
     
@@ -45,7 +46,7 @@ const Header = ({ weather, city, temperatures }) => {
     const { temperature, text, icon} = weather;               
     const { temperature_max, temperature_min, wind } = temperatures;
 
-    //Sensacion termica
+    //Sensacion térmica
     const t = temperature;
     const v = wind ;
     const sensation = ThermalSensation(t,v);
@@ -57,21 +58,24 @@ const Header = ({ weather, city, temperatures }) => {
             iconWeather(parseInt(icon));
 
     const header = (Object.keys(weather).length > 0)
-    ?   (<Fragment>
-            <p className="city">{town}</p>
-            <p className="date">{weekend}, {day} de {month} {hour}:{minutes}</p>
-            <div className="box-grade">
-                {/*MIRAR LOS ICONOS  DE LA WEB Y BUSCAR EN LOS INSTALADOS SU NUMERO CORRESPONDIENTE*/}
-                <div className="container-wi center">
-                    <i className={`wi ${weatherIcon}`} />
+    ? (
+        <Fragment>
+            <Fade right>
+                <p className="city">{town}</p>
+                <p className="date">{weekend}, {day} de {month} {hour}:{minutes}</p>
+                <div className="box-grade">
+                    <div className="container-wi center">
+                        <i className={`wi ${weatherIcon}`} />
+                    </div>
+                    <h1 className="temperature">{temperature}</h1>
+                    <span className="centigrate">º</span>
                 </div>
-                <h1 className="temperature">{temperature}</h1>
-                <span className="centigrate">º</span>
-            </div>
-            <p className="temperatures">{temperature_max}º / {temperature_min}º Sensación térmica {sensation}º</p>
-            <p className="prediction">{text}</p>
-        </Fragment>)
-    :   (<p>Escribe una localizacion</p>);
+                <p className="temperatures">{temperature_max}º / {temperature_min}º Sensación térmica {sensation}º</p>
+                <p className="prediction">{text}</p>
+                </Fade>
+            </Fragment>
+    ):   
+        null;
 
 
     return(

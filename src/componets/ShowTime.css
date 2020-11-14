@@ -174,6 +174,7 @@ div.wi-static > i.wi-night-alt-showers {
     height: 80px;
     align-items:flex-end;
 }
+
 .prueba {
     
     border-radius: 1rem;
@@ -181,10 +182,38 @@ div.wi-static > i.wi-night-alt-showers {
     width: 10px;
     justify-content: center;
 }
-
 .tem{
     margin-top: -22px;
     color: #f9f6f5;
+    
+}
+.bar {
+    
+    border-radius: 1rem;
+    background-color: #f9f6f5;
+    width: 10px;
+    justify-content: center;
+}
+
+
+.container-weather-day{
+    display: flex;
+    justify-content:center;
+    height: 80px;
+    align-items:center;
+}
+.temperature-max-day{
+    margin-bottom: 0;
+    color: #f9f6f5;
+    display: block;
+    margin-top:0.3rem;
+   
+}
+.temperature-min-day{
+    margin-top:0.3rem;
+    color: #f9f6f5;
+    display: block;
+   
 }
 
 .wi-wind{
@@ -198,3 +227,19 @@ div.wi-static > i.wi-night-alt-showers {
     color: #f9f6f5;
 }
 
+
+.container-humidity > .wi-humidity {
+    color: white;
+    font-size: 12pt;
+    display: inline-block;
+    margin:0;
+    padding: 0;
+    padding-left: 0.3rem; 
+}
+.p-humidity{
+    display: inline-block;
+    color:white;
+    font-size: 10pt;
+    margin:0;
+    
+}

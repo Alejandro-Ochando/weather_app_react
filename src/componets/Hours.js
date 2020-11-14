@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import ShowTime from './ShowTime';
 import './Hours.css';
 
@@ -15,18 +15,20 @@ const Hours = ({ hours }) => {
     }
    
     return ( 
-        <div className="container glass center">
-            <div className="row m12" >
-                    {Object.values(forecastByHours).map( day => (
-                        <ShowTime 
-                            /*key={day.hour_data}*/
-                            sizeForecast={sizeForecast}
-                            day={day}
-                            key={day.hour_data}
-                        />
-                    ))}
-            </div>   
-        </div>
+        <Fragment>
+            <div className="container glass center">
+                <div className="row m12" >
+                        {Object.values(forecastByHours).map( day => (
+                            <ShowTime 
+                                /*key={day.hour_data}*/
+                                sizeForecast={sizeForecast}
+                                day={day}
+                                key={day.hour_data}
+                            />
+                        ))}
+                </div>   
+            </div>
+        </Fragment>
     );
 }
  

@@ -18,7 +18,7 @@ const Hours = ({ hours }) => {
         <Fragment>
             <div className="container glass center">
                 <div className="row m12" >
-                        {Object.values(forecastByHours).map( day => (
+                        {forecastByHours.map( day => (
                             <ShowTime 
                                 /*key={day.hour_data}*/
                                 sizeForecast={sizeForecast}

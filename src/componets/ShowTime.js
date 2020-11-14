@@ -22,7 +22,7 @@ const ShowTime = ({day, sizeForecast}) => {
             <p className="hour-data">{hour_data}</p>
             <i className={`wi ${weatherIcon}`} />            
             <div className="a">
-                <div className="prueba" style={{height: temperature +20+ 'px'}}>
+                <div className="prueba" style={{height: (temperature*3)+ -20 + 'px'}}>
                     <p className="tem">{temperature}º</p>
                 </div>
             </div>

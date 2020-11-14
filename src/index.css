@@ -1,21 +1,42 @@
 *{
   font-family: 'Montserrat', sans-serif;
+  
 }
 
 html {
-  box-sizing: border-box;
   height: 100%;
+  margin: 0;
+  padding: 0;   
+  margin:0;
+  padding: 0; 
+  
+ 
 }
 
 body {
   margin: 0;
-  padding: 0;   
   background: rgb(90,73,239);
   background: linear-gradient(180deg, 
                 rgba(90,73,239,1) 0%, 
                 rgba(99,145,246,1) 50%, 
                 rgba(143,209,251,1) 100%);
-  background-repeat: no-repeat;   
+  -moz-background: rgb(90,73,239);
+  -moz-background: linear-gradient(180deg, 
+                rgba(90,73,239,1) 0%, 
+                rgba(99,145,246,1) 50%, 
+                rgba(143,209,251,1) 100%);
+  -webkit-background: rgb(90,73,239);
+  -webkit-background: linear-gradient(180deg, 
+                rgba(90,73,239,1) 0%, 
+                rgba(99,145,246,1) 50%, 
+                rgba(143,209,251,1) 100%);
+  background-repeat: no-repeat; 
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+  animation: image-generated 2s alternate infinite;
+  
+    
 }
 
 .height{

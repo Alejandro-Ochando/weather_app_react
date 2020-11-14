@@ -68,7 +68,7 @@ const Header = ({ weather, city, temperatures }) => {
                 <h1 className="temperature">{temperature}</h1>
                 <span className="centigrate">º</span>
             </div>
-    <p className="temperatures">{temperature_max}º / {temperature_min}º Sensación térmica {sensation}º</p>
+            <p className="temperatures">{temperature_max}º / {temperature_min}º Sensación térmica {sensation}º</p>
             <p className="prediction">{text}</p>
         </Fragment>)
     :   (<p>Escribe una localizacion</p>);

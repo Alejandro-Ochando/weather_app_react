@@ -40,7 +40,7 @@ const Buscador = ({ saveCity, saveCode, saveWeather, saveTemperatures, saveHours
 
     return ( 
         
-        <div className="container center">
+        <div className="center">
             <div className="row">
                 <form 
                     className="col s12"

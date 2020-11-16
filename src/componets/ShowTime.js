@@ -4,9 +4,9 @@ import './ShowTime.css';
 
 const ShowTime = ({day, sizeForecast}) => {
 
-    const { hour_data, icon, temperature, icon_wind } = day
+    const { hour_data, icon, temperature, icon_wind, humidity, wind,pressure } = day
     let hour = getHour();
-    const weatherIcon = (hour <= 8 || hour >= 19) 
+    let weatherIcon = (hour <= 8 || hour >= 19) 
         ?
             iconWeather(icon)
         :
@@ -14,7 +14,13 @@ const ShowTime = ({day, sizeForecast}) => {
 
     const windIcon = iconWind(icon_wind);
     const sizeColumn = (sizeForecast === 4) ? ("s3") : ("s2");
-
+    
+    const t =temperature; 
+    const HR =humidity; 
+    const pr = Math.round((((HR/100)**(1/8))*(110+t)-110),2);
+    if(humidity > 93 &&   temperature >= pr &&  wind <= 10 && pressure > 1019){
+        weatherIcon = iconWeather(12);
+    }
 
     return ( 
         <div className={`col ${sizeColumn}`}>

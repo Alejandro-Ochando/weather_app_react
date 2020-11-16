@@ -43,7 +43,7 @@ const Header = ({ weather, city, temperatures }) => {
     if(minutes < 10 ) minutes = '0'+minutes;
     if(hour < 10 ) hour = '0' + hour;
 
-    const { temperature, text, icon} = weather;               
+    const { temperature, text, icon, humidity, pressure} = weather;               
     const { temperature_max, temperature_min, wind } = temperatures;
 
     //Sensacion térmica
@@ -51,11 +51,18 @@ const Header = ({ weather, city, temperatures }) => {
     const v = wind ;
     const sensation = ThermalSensation(t,v);
     
-    const weatherIcon = (hour <= 8 || hour >= 19) 
+    let weatherIcon = (hour <= 8 || hour >= 19) 
         ?
             iconWeather(icon)
         :
             iconWeather(parseInt(icon));
+
+    
+    const pr = Math.round((((humidity/100)**(1/8))*(110+temperature)-110),2);
+    
+    if(humidity > 93 &&   temperature >= pr &&  wind <= 10 && pressure > 1019){
+        weatherIcon = iconWeather(12);
+    }
 
     const header = (Object.keys(weather).length > 0)
     ? (

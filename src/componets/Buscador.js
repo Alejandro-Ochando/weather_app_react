@@ -35,6 +35,8 @@ const Buscador = ({ saveCity, saveCode, saveWeather, saveTemperatures, saveHours
             saveTemperatures('');
             saveHours('');
             saveDay('');
+            let intro = document.getElementById('intro');
+            intro.className = 'intro';
             return;
         }
     }

@@ -132,3 +132,91 @@ export function iconWind(iconwind){
         return("wi-towards-nw");
     }
 }    
+
+//Fondos según el tiempo
+export function iconFond(icon){
+    switch(icon) {
+
+        case 1:
+        case "1":
+            return("sun");
+        case "1n":
+            return("sun");  
+        case 2:
+        case "2":    
+            return("sun");
+        case "2n":
+            return("sun");    
+        case 4:
+        case 5:
+        case "4":
+        case "5":      
+            return("cloudy");
+        case "4n":
+        case "5n":      
+            return("sun");    
+        case 6:
+        case "6n":
+        case "6":     
+            return("cloudy");
+        case 7:
+        case "7n":
+        case "7":    
+            return("cloudy");
+        case 3:
+        case 8:
+        case 12:
+        case "3n":
+        case "8n":
+        case "12n":
+        case "3":
+        case "8":
+        case "12":   
+            return("fog");    
+        case 18:
+        case "18n":
+        case "18":    
+            return("rain");
+        case 19:
+        case 27:
+        case "19n":
+        case "27n":
+        case "19":
+        case "27":        
+            return("rain"); 
+        case 21:
+        case 23:
+        case 22:
+        case "21n":
+        case "23n":
+        case "22n":
+        case "21":
+        case "23":
+        case "22":
+            return("storm");   
+        case 28:
+        case "28n":
+        case "28":
+            return("rain");
+        case 29:
+            return("snow");
+        case "29n":
+            return("snow");    
+        case 30:
+        case 31:
+        case 32:
+        case "30n":
+        case "31n":
+        case "32n":
+        case "30":
+        case "31":
+        case "32":     
+            return("snow");     
+        case 33:
+            return("rain");
+        case "33n":    
+            return("rain");
+        default:
+            return("intro");      
+    }
+}

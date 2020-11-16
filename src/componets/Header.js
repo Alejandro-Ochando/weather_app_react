@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import './Header.css';
 import { ThermalSensation, iconWeather, getWeekNumber,  getMonthNumber, 
-    getDay, getHour, getMinute
+    getDay, getHour, getMinute, iconFond
 } from '../helper';
 import Fade from 'react-reveal/Fade';
 
@@ -60,9 +60,19 @@ const Header = ({ weather, city, temperatures }) => {
     
     const pr = Math.round((((humidity/100)**(1/8))*(110+temperature)-110),2);
     
+    let intro = document.getElementById('intro');
+    intro.className = iconFond(icon);
+    
     if(humidity > 93 &&   temperature >= pr &&  wind <= 10 && pressure > 1019){
         weatherIcon = iconWeather(12);
+        intro = document.getElementById('intro');
+        intro.className = 'fog';
     }
+
+    
+    
+    
+    
 
     const header = (Object.keys(weather).length > 0)
     ? (

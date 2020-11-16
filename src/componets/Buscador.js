@@ -4,7 +4,7 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import '../data/pueblos.json';
 import './Buscador.css';
 
-const Buscador = ({ saveCity, saveCode, saveWeather, saveTemperatures, saveHours, saveDay }) => {
+const Buscador = ({ saveCity, saveCode, saveWeather, saveTemperatures, saveHours, saveDay, saveError, saveActiveTitle }) => {
     const magnifyingGlass = <FontAwesomeIcon icon={faSearch} />
     
     const [ search, saveSearch ] = useState('');
@@ -28,6 +28,8 @@ const Buscador = ({ saveCity, saveCode, saveWeather, saveTemperatures, saveHours
         if( result.length >= 1 ){
             saveCity(result[0].name);
             saveCode(result[0].id);
+            saveError(false);
+            saveActiveTitle(false);
         }else{
             saveCity('');
             saveCode('');
@@ -35,6 +37,8 @@ const Buscador = ({ saveCity, saveCode, saveWeather, saveTemperatures, saveHours
             saveTemperatures('');
             saveHours('');
             saveDay('');
+            saveError(true);
+            saveActiveTitle(false);
             let intro = document.getElementById('intro');
             intro.className = 'intro';
             return;

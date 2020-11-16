@@ -1,0 +1,41 @@
+.title-p {
+    margin-top: 5rem;
+    font-size: 25pt;
+   color:white;
+    display: inline-block;
+}
+
+.image{
+   padding-top: 2px;
+    padding-bottom:0;
+    width: 3rem;
+    display: inline-block;
+    margin-right: 0.4rem;
+}
+
+.author{
+    color: rgba(251, 247, 247, 0.835);
+}
+
+
+@media (max-width: 850px) {
+    .title-p {
+        margin-top: 0;
+        font-size: 25pt;
+       color:white;
+        display: inline-block;
+    }
+    
+    .image{
+       
+        padding-bottom:0;
+        width: 3rem;
+        display: inline-block;
+        margin-right: 0.4rem;
+    }
+    
+    .author{
+        margin:0;
+        color: rgba(240, 240, 240, 0.575);;
+    }
+}

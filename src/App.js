@@ -3,6 +3,8 @@ import Buscador from './componets/Buscador';
 import Header from './componets/Header';
 import Hours from './componets/Hours';
 import Days from './componets/Days';
+import Error from './componets/Error';
+import Title from './componets/Title';
 import axios from 'axios';
 
 
@@ -14,6 +16,8 @@ function App() {
   const [ temperatures, saveTemperatures ] = useState({});
   const [ hours, saveHours] = useState([]);
   const [ day, saveDay ] = useState([]);
+  const [ error, saveError ] = useState(false);
+  const [ activeTitle, saveActiveTitle ] = useState(true);
 
   useEffect(()=> {
     
@@ -32,7 +36,6 @@ function App() {
       saveDay(result.data);
       console.log("primera vez");
     }
-
     consultAPI();
   },[code]);
   
@@ -45,7 +48,16 @@ function App() {
           saveTemperatures={saveTemperatures}
           saveHours={saveHours}
           saveDay={saveDay}
+          saveError={saveError}
+          saveActiveTitle={saveActiveTitle}
         />
+        { (error) ? <Error  
+                      mensaje="Error al buscar la provincia" 
+                    />
+        : null
+        }
+        { (activeTitle) ? <Title /> : null}
+        
         <Header 
           city={city}
           weather={weather}

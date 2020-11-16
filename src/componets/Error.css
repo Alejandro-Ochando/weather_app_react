@@ -1,0 +1,18 @@
+.error{
+    padding: 0.5rem;
+    border-radius: 1rem;
+    
+}
+
+.message-error{
+    color:white;
+    font-family: 'Monserrat';
+    font-size: 18pt;
+}
+
+
+@media (max-width: 850px) {
+    .message-error{
+        font-size: 12pt;
+    }
+}

@@ -11,6 +11,7 @@ const Title = () => {
                 <p className="title-p">El Tiempo</p>
                 
                 <p className="author">Alejandro Ochando ©{date}</p>
+                <p className="fuente">Tutiempo Network, S.L. ©</p>
             </div>
         </div>);
 }

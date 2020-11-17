@@ -220,3 +220,69 @@ export function iconFond(icon){
             return("intro");      
     }
 }
+
+//Funcion para saber fase lunar
+export function moonIcon(moon_phases_icon){
+    switch(moon_phases_icon) {
+        case "1":
+                return("wi-moon-new");
+        case "2":
+                return("wi-moon-waxing-crescent-1");
+        case "3":
+                return("wi-moon-waxing-crescent-2");
+        case "4":
+                return("wi-moon-waxing-crescent-3");
+        case "5":
+                return("wi-moon-waxing-crescent-4");
+        case "6": 
+            return("wi-moon-waxing-crescent-5");
+        case "7":
+                return("wi-moon-waxing-crescent-6");
+        case "8":
+            return("wi-moon-first-quarter");
+        case "9": 
+            return("wi-moon-waxing-gibbous-1") ;
+        case "10":
+            return("wi-moon-waxing-gibbous-2");
+        case "11":
+            return("wi-moon-waxing-gibbous-3");
+        case "12":
+            return("wi-moon-waxing-gibbous-4");
+        case "13":
+            return("wi-moon-waxing-gibbous-5");
+        case "14":
+            return("wi-moon-waxing-gibbous-6");
+        case "15":
+            return("wi-moon-full");
+        case "16":
+                return("wi-moon-waning-gibbous-1");
+        case "17":
+                return("wi-moon-waning-gibbous-2");
+        case "18": 
+                return("wi-moon-waning-gibbous-3");
+        case "19":
+                return("wi-moon-waning-gibbous-4");
+        case "20":
+                return("wi-moon-waning-gibbous-5");
+        case "21": 
+                return("wi-moon-waning-gibbous-6");
+        case "22":
+                return("wi-moon-third-quarter");
+        case "23":
+                return("wi-moon-waning-crescent-1");
+        case "24": 
+            return("wi-moon-waning-crescent-2");
+        case "25":
+                return("wi-moon-waning-crescent-3");
+        case "26":
+                return("wi-moon-waning-crescent-4");
+        case "27": 
+            return("wi-moon-waning-crescent-5");
+        case "28":
+                return("wi-moon-waning-crescent-6");
+        case "29":
+                return("wi-moon-new");
+        default:
+            return("na");
+    }
+}

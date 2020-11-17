@@ -16,6 +16,9 @@
 .author{
     color: rgba(251, 247, 247, 0.835);
 }
+.fuente{
+    color: rgba(251, 247, 247, 0.219);
+}
 
 
 @media (max-width: 850px) {

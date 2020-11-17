@@ -18,7 +18,7 @@ const ShowTime = ({day, sizeForecast}) => {
     const t =temperature; 
     const HR =humidity; 
     const pr = Math.round((((HR/100)**(1/8))*(110+t)-110),2);
-    if(humidity > 93 &&   temperature >= pr &&  wind <= 10 && pressure > 1019){
+    if(humidity > 94 &&   temperature >= pr &&  wind <= 10 && pressure > 1019){
         weatherIcon = iconWeather(12);
     }
 

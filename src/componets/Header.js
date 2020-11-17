@@ -51,7 +51,7 @@ const Header = ({ weather, city, temperatures }) => {
     const v = wind ;
     const sensation = ThermalSensation(t,v);
     
-    let weatherIcon = (hour <= 8 || hour >= 19) 
+    let weatherIcon = (hour >= 8 || hour <= 19) 
         ?
             iconWeather(icon)
         :
@@ -63,16 +63,11 @@ const Header = ({ weather, city, temperatures }) => {
     let intro = document.getElementById('intro');
     intro.className = iconFond(icon);
     
-    if(humidity > 93 &&   temperature >= pr &&  wind <= 10 && pressure > 1019){
+    if(humidity > 94 &&   temperature >= pr &&  wind <= 10 && pressure > 1019){
         weatherIcon = iconWeather(12);
         intro = document.getElementById('intro');
         intro.className = 'fog';
     }
-
-    
-    
-    
-    
 
     const header = (Object.keys(weather).length > 0)
     ? (

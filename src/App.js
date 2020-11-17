@@ -5,6 +5,7 @@ import Hours from './componets/Hours';
 import Days from './componets/Days';
 import Error from './componets/Error';
 import Title from './componets/Title';
+import Details from './componets/Details';
 import axios from 'axios';
 
 
@@ -57,7 +58,6 @@ function App() {
         : null
         }
         { (activeTitle) ? <Title /> : null}
-        
         <Header 
           city={city}
           weather={weather}
@@ -69,6 +69,11 @@ function App() {
         <Days
           day={day}
         />
+        {(Object.keys(temperatures).length > 0) 
+          ? <Details 
+              temperatures={temperatures}
+            />
+          : null}
       </div>
   );
 }

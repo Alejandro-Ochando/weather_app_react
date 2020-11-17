@@ -20,6 +20,9 @@ const Hours = ({ hours }) => {
         <Fragment>
             <Fade left>
                 <div className="container glass center">
+                    <div className="row m12">
+                        <p className="title-hour">Por hora</p>
+                    </div>
                     <div className="row m12" >
                             {forecastByHours.map( day => (
                                 <ShowTime 

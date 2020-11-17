@@ -8,3 +8,11 @@
 .glass > .row{
     margin: 0;
 }
+.title-hour{
+    text-align: right !important;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 10pt;
+    color:white;
+    font-weight: bold;
+}

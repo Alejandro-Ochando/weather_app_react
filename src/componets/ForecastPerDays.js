@@ -2,7 +2,7 @@ import React from 'react';
 import { iconWeather, getHour } from '../helper';
 import './ForecastPerDays.css';
 
-const ForecastPerDays = ({days,  sizeForecast}) => {
+const ForecastPerDays = ({days,  sizeForecast, currentDate }) => {
     const { date, humidity, icon, temperature_max, temperature_min } = days
     let hour = getHour();
     
@@ -21,16 +21,20 @@ const ForecastPerDays = ({days,  sizeForecast}) => {
     const objectDate = new Date(date);
     const index = objectDate.getUTCDay();
     const WEEKEND = [
-        "Domingo",
-        "Lunes",
-        "Martes",
-        "Miércoles",
-        "Jueves",
-        "Viernes",
-        "Sábado"
+        "Dom.",
+        "Lun.",
+        "Mar.",
+        "Mié.",
+        "Jue.",
+        "Vie.",
+        "Sáb."
     ]  
     
-    const weekendDay=(WEEKEND[index]);
+    let weekendDay=(WEEKEND[index]);
+    const numDay = objectDate.getDate();
+    if(numDay === currentDate){
+        weekendDay="Hoy";
+    }
 
     return ( 
         <div className={`col ${sizeColumn}`}>

@@ -1,8 +1,9 @@
 import React from 'react';
 import { iconWeather, getHour } from '../helper';
-import './ForecastPerDays.css';
+import './ListadoDias.css';
 
-const ForecastPerDays = ({days,  sizeForecast, currentDate }) => {
+
+const Dias= ({days,  sizeForecast, currentDate }) => {
     const { date, humidity, icon, temperature_max, temperature_min } = days
     let hour = getHour();
     
@@ -55,4 +56,4 @@ const ForecastPerDays = ({days,  sizeForecast, currentDate }) => {
      );
 }
  
-export default ForecastPerDays;
+export default Dias;

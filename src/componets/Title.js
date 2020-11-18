@@ -9,7 +9,6 @@ const Title = () => {
             <div className="row ">
                 <img className="image" src="https://i.ibb.co/Y0hVTxd/770b805d5c99c7931366c2e84e88f251.png" />
                 <p className="title-p">El Tiempo</p>
-                
                 <p className="author">Alejandro Ochando ©{date}</p>
                 <p className="fuente">Tutiempo Network, S.L. ©</p>
             </div>

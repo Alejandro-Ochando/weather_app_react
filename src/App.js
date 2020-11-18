@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import Buscador from './componets/Buscador';
 import Header from './componets/Header';
-import Hours from './componets/Hours';
-import Days from './componets/Days';
+import ListadoHoras from './componets/ListadoHoras';
+import ListadoDias from './componets/ListadoDias';
 import Error from './componets/Error';
 import Title from './componets/Title';
-import Details from './componets/Details';
+import Detalles from './componets/Detalles';
 import axios from 'axios';
 
 
@@ -35,7 +35,6 @@ function App() {
       saveTemperatures(result.data.day1);
       saveHours(result.data.hour_hour);
       saveDay(result.data);
-      console.log("primera vez");
     }
     consultAPI();
   },[code]);
@@ -63,14 +62,14 @@ function App() {
           weather={weather}
           temperatures={temperatures}
         />
-        <Hours
+        <ListadoHoras
           hours={hours}
         />
-        <Days
+        <ListadoDias
           day={day}
         />
         {(Object.keys(temperatures).length > 0) 
-          ? <Details 
+          ? <Detalles 
               temperatures={temperatures}
             />
           : null}

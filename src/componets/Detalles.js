@@ -1,15 +1,14 @@
 import React from 'react';
 import Fade from 'react-reveal/Fade';
-import './Details.css';
+import './Detalles.css';
 import { moonIcon } from '../helper';
 
 
-const Details = ({temperatures}) => {
+const Detalles = ({temperatures}) => {
     const { moonrise, moonset, sunrise, sunset, 
             moon_phases_icon, humidity, wind } = temperatures;
     
     const moon = moonIcon( moon_phases_icon);
-    console.log(moon);
     
     return ( 
         <Fade left>
@@ -69,8 +68,7 @@ const Details = ({temperatures}) => {
                 </div>
             </div>    
         </Fade>
-
      );
 }
  
-export default Details;
+export default Detalles;

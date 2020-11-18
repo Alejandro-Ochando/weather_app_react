@@ -1,8 +1,9 @@
 import React from 'react';
 import { iconWeather, getHour, iconWind } from '../helper';
-import './ShowTime.css';
+import './Hora.css';
 
-const ShowTime = ({day, sizeForecast}) => {
+
+const Hora = ({day, sizeForecast}) => {
 
     const { hour_data, icon, temperature, icon_wind, humidity, wind,pressure } = day
     let hour = getHour();
@@ -40,4 +41,4 @@ const ShowTime = ({day, sizeForecast}) => {
     );
 }
  
-export default ShowTime;
+export default Hora;

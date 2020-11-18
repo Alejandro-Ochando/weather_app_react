@@ -5,21 +5,18 @@
     margin-top:0.3rem;
    
 }
-
 .container-weather-day{
     display: flex;
     justify-content:center;
     height: 80px;
     align-items:center;
 }
-
 .temperature-min-day{
     margin-top:0.3rem;
     color: #f9f6f5;
     display: block;
    
 }
-
 .container-humidity > .wi-humidity {
     color: white;
     font-size: 12pt;
@@ -28,11 +25,9 @@
     padding: 0;
     padding-left: 0.3rem; 
 }
-
 .p-humidity{
     display: inline-block;
     color:white;
     font-size: 10pt;
     margin:0;
-    
 }

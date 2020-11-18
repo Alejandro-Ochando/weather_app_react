@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react';
-import ShowTime from './ShowTime';
-import './Hours.css';
+import Hora from './Hora';
+import './ListadoHoras.css';
 import Fade from 'react-reveal/Fade';
 
 
-const Hours = ({ hours }) => {
+const ListadoHoras = ({ hours }) => {
     if(hours.length === 0 || hours.length === '') return null;
     
     const screen = (window.screen.width);
@@ -25,7 +25,7 @@ const Hours = ({ hours }) => {
                     </div>
                     <div className="row m12" >
                             {forecastByHours.map( day => (
-                                <ShowTime 
+                                <Hora 
                                     sizeForecast={sizeForecast}
                                     day={day}
                                     key={day.hour_data}
@@ -38,4 +38,4 @@ const Hours = ({ hours }) => {
     );
 }
  
-export default Hours;
+export default ListadoHoras;

@@ -1,8 +1,9 @@
 import React from 'react';
-import ForecastPerDays from './ForecastPerDays';
+import Dias from './Dias';
 import Fade from 'react-reveal/Fade';
 
-const Day = ({ day }) => {
+
+const ListadoDias = ({ day }) => {
     const date = new Date();
     const currentDate = parseInt(date.toUTCString().slice(4, 7));
 
@@ -29,7 +30,7 @@ const Day = ({ day }) => {
         </div>
         <div className="row m12" >
             {forecastByDays.map( days => (
-                <ForecastPerDays
+                <Dias
                     sizeForecast={ sizeForecast}
                     days={days}
                     key={days.date}
@@ -42,4 +43,4 @@ const Day = ({ day }) => {
     );    
 }
  
-export default Day;
+export default ListadoDias;

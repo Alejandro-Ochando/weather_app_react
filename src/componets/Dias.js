@@ -16,19 +16,20 @@ const Dias= ({days,  sizeForecast, currentDate }) => {
     const sizeColumn = (sizeForecast === 4) ? ("s3") : ("s2");
     const reference = (Math.sign(temperature_min))
     const variation  = temperature_max - temperature_min;
-    const baseValue = (reference < 0)?  -50 : 10;   
+    const baseValue = (reference < 0)?  0 : 10;   
     const temperature = baseValue + (variation * 5);
     
     const objectDate = new Date(date);
     const index = objectDate.getUTCDay();
     const WEEKEND = [
-        "Dom.",
+       
         "Lun.",
         "Mar.",
         "Mié.",
         "Jue.",
         "Vie.",
-        "Sáb."
+        "Sáb.",
+        "Dom."
     ]  
     
     let weekendDay=(WEEKEND[index]);

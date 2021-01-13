@@ -2,7 +2,7 @@
 <img src="https://i.ibb.co/pPYfKM0/React.png" alt="React" border="0">
 <p>
 
-# Song lyrics search engine App [![Netlify Status](https://api.netlify.com/api/v1/badges/da7f9b44-738f-45c3-b1b3-d4833820fbe8/deploy-status)](https://app.netlify.com/sites/eltiempo-app/deploys)
+# Weather App - El Tiempo [![Netlify Status](https://api.netlify.com/api/v1/badges/da7f9b44-738f-45c3-b1b3-d4833820fbe8/deploy-status)](https://app.netlify.com/sites/eltiempo-app/deploys)
 
 
 

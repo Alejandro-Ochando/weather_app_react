@@ -10,6 +10,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 
 
+
+
+## Live Demo
+
+*  https://eltiempo-app.netlify.app/
+
+
+
 ## About 
 
 >Project fully completed.
@@ -35,11 +43,6 @@ This is my project made in React, ***it is functional on production lathes***.
 <img src=https://i.ibb.co/t4fxVtf/eltiempo-principal.png>
 <img src=https://i.ibb.co/Lh6M9Zt/eltiempo-principal2.png>
 
-
-
-## Live Demo
-
-*  https://eltiempo-app.netlify.app/
 
 
 ## Console commands
